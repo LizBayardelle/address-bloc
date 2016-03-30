@@ -90,19 +90,19 @@ RSpec.describe AddressBook do
     it "imports the 1st entry" do
       book.import_from_csv("entries_2.csv")
       entry_one = book.entries[0]
-      check_entry(entry_one, "Larry", "000-000-0000", "larry@blocmail.com")
+      check_entry(entry_one, "Aaron", "000-000-0000", "aaron@blocmail.com")
     end
 
     it "imports the 2nd entry" do
       book.import_from_csv("entries_2.csv")
       entry_two = book.entries[1]
-      check_entry(entry_two, "Curley", "111-111-1111", "curley@blocmail.com")
+      check_entry(entry_two, "Beth", "111-111-1111", "beth@blocmail.com")
     end
 
     it "imports the 3rd entry" do
-      book.import_from_csv("entries.csv")
+      book.import_from_csv("entries_2.csv")
       entry_three = book.entries[2]
-      check_entry(entry_three, "Moe", "222-222-2222", "moe@blocmail.com")
+      check_entry(entry_three, "Casey", "222-222-2222", "casey@blocmail.com")
     end
   end
 end
